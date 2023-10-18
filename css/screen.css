@@ -26,9 +26,14 @@
 \*------------------------------------*/
 
 :root {
+    --font-size-time: .75rem;
+
     /* colors */
+    --color-front: #CCE7FF;
+    --color-back: #0F3557;
 
     /* opacity */
+    --global-opacity: 0.6;
 
     /* transitions */
 }
@@ -50,6 +55,7 @@ html {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "zero" 1; 
 }
 
 *,
@@ -200,6 +206,13 @@ input::placeholder {
     color: gray;
 }
 
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+
 /*------------------------------------*\
 #OBJECTS
 \*------------------------------------*/
@@ -260,7 +273,15 @@ input::placeholder {
     Website main logo
 */
 
-.c-logo {}
+.c-logo {
+    color: var(--color-front);
+    line-height: 1rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
 
 /*
     Component: Sun
@@ -268,21 +289,64 @@ input::placeholder {
     The sun
 */
 
-.c-sun {}
+.c-sun {
+    width: 22px;
+    height: 22px;
+    fill: var(--color-front);
+}
 
-.c-logo .c-sun {}
+.c-logo .c-sun {
+}
 
 /*
     Component: App
     ---
     Main app wrapper
 */
+.c-app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem;
+    flex-direction: column;
+    background-color: var(--color-back);
+}
+
+.c-app__summary {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+}
+
+.c-app__location {
+    font-size: 1rem;
+    color: var(--color-front);
+    line-height: 1rem;
+}
 
 /*
     Component: Horizon
     ---
     Horizon with sun visualisation
 */
+
+/* .c-horizon__sky-wrapper
+
+  .c-horizon__sky
+    .c-horizon__sun
+      ::before
+      .c-sun */
+.c-horizon__line {
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+.c-horizon__time {
+    font-size: var(--font-size-time);
+    line-height: .875rem;
+    padding-top: 0.5rem;
+}
 
 /*------------------------------------*\
 #UTILITIES
@@ -292,6 +356,9 @@ input::placeholder {
     Utilities: Mute
     Mute with opacity
 */
+.u-muted {
+    opacity: var(--global-opacity);
+}
 
 /*------------------------------------*\
 #STATES
