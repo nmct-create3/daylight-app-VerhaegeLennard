@@ -2,6 +2,25 @@
 #FONTS
 \*------------------------------------*/
 
+@font-face {
+    font-family: 'Work Sans';
+    src: url('/fonts/Inter-UI-Regular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('/fonts/Inter-UI-Medium.woff2') format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('/fonts/Inter-UI-Bold.woff2') format('woff2');
+    font-weight: 700;
+}
+  
+
 /*------------------------------------*\
 #Variables
 \*------------------------------------*/
@@ -27,7 +46,7 @@
 html {
     font-size: 100%;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
+    font-family: 'Work Sans', sans-serif;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
